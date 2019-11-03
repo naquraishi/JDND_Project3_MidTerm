@@ -1,0 +1,15 @@
+package com.udacity.course3.reviews;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@EnableJpaRepositories(basePackages = "com.udacity.course3.reviews.repository")
+@SpringBootApplication
+public class ReviewsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ReviewsApplication.class, args);
+	}
+
+}
