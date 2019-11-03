@@ -1,6 +1,7 @@
 package com.udacity.course3.reviews.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "reviews_table")

@@ -2,6 +2,7 @@ package com.udacity.course3.reviews.model;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name="comments_table")
@@ -11,8 +12,10 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
     private int id;
+
     @Column(name = "comment_content")
     private String commentContent;
+
     @ManyToOne
     @JoinColumn(name = "review_id")
     private Review review;

@@ -1,6 +1,7 @@
 package com.udacity.course3.reviews.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "products_table")
@@ -11,6 +12,7 @@ public class Product {
     @Column(name = "product_id")
     private int id;
 
+    @NotEmpty(message = "please add product name")
     @Column(name = "product_name")
     private String productName;
 
